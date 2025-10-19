@@ -1,0 +1,86 @@
+/* Đặt lại style cơ bản cho body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fcf9f4;
+  border-bottom: 1px solid #e6e1d8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  font-weight: 600;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0779f2;
+  font-family: "Georgia", serif;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 60px;
+}
+
+.nav div {
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: larger;
+}
+
+.nav div:hover {
+  color: #0d67ef;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.cart {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #0d7bf0;
+  font-size: larger;
+}
+
+.login-btn {
+  background-color: #1370e1;
+  color: #fff;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #1970ea;
+}
+
+main,
+.content {
+  margin-top: 80px;
+}

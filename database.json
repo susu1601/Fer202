@@ -1,0 +1,118 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "userName": "john_doe",
+      "passWord": "123456",
+      "status": "active",
+      "role": "Admin",
+      "email": "admin@gmail.com",
+      "phoneNumber": "0123456",
+      "address": "Ha Noi"
+    },
+    {
+      "id": 2,
+      "userName": "jane_doe",
+      "passWord": "abcdef",
+      "status": "inactive",
+      "role": "User",
+      "email": "user1@gmail.com",
+      "phoneNumber": "0246810",
+      "address": "Ho Chi Minh"
+    }
+  ],
+
+  "categories": [
+    { "id": 1, "name": "Books", "description": "Various genres of books" },
+    {
+      "id": 2,
+      "name": "Stationery",
+      "description": "Office and school supplies"
+    },
+    { "id": 3, "name": "Books", "description": "Various genres of books" },
+    {
+      "id": 4,
+      "name": "Stationery",
+      "description": "Office and school supplies"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "description": "Classic novel",
+      "image": "gatsby.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Ballpoint Pen",
+      "author": "",
+      "description": "Blue ink pen",
+      "image": "pen.jpg",
+      "categoryId": 2
+    }
+  ],
+  "discounts": [
+    {
+      "id": 1,
+      "name": "Summer Sale",
+      "code": "SUMMER20",
+      "quantity": 100,
+      "amountPercentage": 20,
+      "startDate": "2025-06-01",
+      "endDate": "2025-06-30",
+      "isActive": true
+    }
+  ],
+  "productDiscounts": [
+    { "productId": 1, "discountId": 1, "note": "Applies to all books" }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "createDate": "2025-05-01",
+      "totalAmount": 300.5
+    }
+  ],
+  "cartDetails": [
+    { "cartId": 1, "productId": 1, "quantity": 1 },
+    { "cartId": 1, "productId": 2, "quantity": 2 }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "shippingAddress": "12 Ton That Thuyet",
+      "totalAmount": 300.5,
+      "orderDate": "2025-05-03",
+      "paymentMethod": "Credit Card",
+      "shippingMethod": "Standard",
+      "shippingCost": 20,
+      "paymentStatus": "Paid",
+      "staffId": 1,
+      "status": "Delivered"
+    }
+  ],
+  "orderDetails": [
+    {
+      "productId": 1,
+      "orderId": 1,
+      "quantity": 1,
+      "price": 250,
+      "discount": 20
+    },
+    { "productId": 2, "orderId": 1, "quantity": 2, "price": 25, "discount": 0 }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "orderId": 1,
+      "rating": 5,
+      "description": "Great quality!"
+    }
+  ]
+}

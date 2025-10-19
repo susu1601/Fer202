@@ -1,0 +1,42 @@
+/* styles.css */
+body {
+  background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+  font-family: "Arial", sans-serif; /* Phông chữ đẹp */
+}
+
+#register-form {
+  background-color: white; /* Nền trắng cho form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+  border-radius: 8px; /* Bo góc cho form */
+  padding: 30px; /* Padding cho form */
+  margin-top: 50px; /* Khoảng cách phía trên */
+}
+
+.card-title {
+  font-size: 24px; /* Kích thước tiêu đề lớn hơn */
+  font-weight: bold; /* Chữ đậm */
+}
+
+.text-center a {
+  color: #007bff; /* Màu sắc cho liên kết */
+}
+
+.text-center a:hover {
+  text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Màu nền button */
+  border: none; /* Bỏ viền */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Màu nền button khi hover */
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  #register-form {
+    padding: 20px; /* Giảm padding cho màn hình nhỏ */
+  }
+}
