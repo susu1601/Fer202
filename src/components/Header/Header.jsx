@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { Nav } from 'react-bootstrap';
+import { Dropdown, Nav } from 'react-bootstrap';
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Header = () => {
+    const { user, logout } = useContext(AuthContext);
     return (
         <div className="header">
             <div className="logo">
@@ -20,10 +22,27 @@ const Header = () => {
 
             <div className="actions">
                 <div className="cart">🛒 Cart</div>
+                {!user ?
+                    (<Link to="/login">
+                        <button className="login-btn">Login</button>
+                    </Link>)
+                    :
+                    (<Dropdown>
+                        <Dropdown.Toggle variant="light" id="dropdown-basic">
+                            👤 {user.userName}
+                        </Dropdown.Toggle>
 
-                <Link to="/login">
-                    <button className="login-btn">Login</button>
-                </Link>
+                        <Dropdown.Menu align="end">
+                            <Dropdown.Item as={Link} to="/account">Account</Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/orders">Historical Orders</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item onClick={logout}>Log Out</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>)
+
+
+                }
+
             </div>
         </div>
     );

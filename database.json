@@ -2,8 +2,8 @@
   "accounts": [
     {
       "id": 1,
-      "userName": "john_doe",
-      "passWord": "123456",
+      "username": "john_doe",
+      "password": "123456",
       "status": "active",
       "role": "Admin",
       "email": "admin@gmail.com",
@@ -12,8 +12,8 @@
     },
     {
       "id": 2,
-      "userName": "jane_doe",
-      "passWord": "abcdef",
+      "username": "jane_doe",
+      "password": "123",
       "status": "inactive",
       "role": "User",
       "email": "user1@gmail.com",
