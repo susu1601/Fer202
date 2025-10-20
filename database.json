@@ -19,17 +19,34 @@
       "email": "user1@gmail.com",
       "phoneNumber": "0246810",
       "address": "Ho Chi Minh"
+    },
+    {
+      "id": 3,
+      "username": "Linh",
+      "email": "user2@gmail.com",
+      "password": "1234",
+      "status": "active",
+      "role": "User",
+      "phoneNumber": "",
+      "address": ""
     }
   ],
-
   "categories": [
-    { "id": 1, "name": "Books", "description": "Various genres of books" },
+    {
+      "id": 1,
+      "name": "Books",
+      "description": "Various genres of books"
+    },
     {
       "id": 2,
       "name": "Stationery",
       "description": "Office and school supplies"
     },
-    { "id": 3, "name": "Books", "description": "Various genres of books" },
+    {
+      "id": 3,
+      "name": "Books",
+      "description": "Various genres of books"
+    },
     {
       "id": 4,
       "name": "Stationery",
@@ -67,7 +84,11 @@
     }
   ],
   "productDiscounts": [
-    { "productId": 1, "discountId": 1, "note": "Applies to all books" }
+    {
+      "productId": 1,
+      "discountId": 1,
+      "note": "Applies to all books"
+    }
   ],
   "carts": [
     {
@@ -78,8 +99,16 @@
     }
   ],
   "cartDetails": [
-    { "cartId": 1, "productId": 1, "quantity": 1 },
-    { "cartId": 1, "productId": 2, "quantity": 2 }
+    {
+      "cartId": 1,
+      "productId": 1,
+      "quantity": 1
+    },
+    {
+      "cartId": 1,
+      "productId": 2,
+      "quantity": 2
+    }
   ],
   "orders": [
     {
@@ -104,7 +133,13 @@
       "price": 250,
       "discount": 20
     },
-    { "productId": 2, "orderId": 1, "quantity": 2, "price": 25, "discount": 0 }
+    {
+      "productId": 2,
+      "orderId": 1,
+      "quantity": 2,
+      "price": 25,
+      "discount": 0
+    }
   ],
   "feedbacks": [
     {

@@ -25,9 +25,13 @@ const Login = () => {
             );
 
             if (user) {
-                alert(`Welcome back, ${user.username} !`);
-                login(user);
-                navigate('/');
+                if (user.status === "active") {
+                    alert(`Welcome back, ${user.username} !`);
+                    login(user);
+                    navigate('/');
+                } else {
+                    setError("The account was banned!");
+                }
             } else {
                 setError("Invalid Email or password.");
             }
