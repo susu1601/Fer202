@@ -3,6 +3,9 @@ import Header from './components/Header/Header';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import { AuthProvider } from "./contexts/AuthContext";
+import { ProductContext, ProductProvider } from "./contexts/ProductContext";
+import { DiscountContext, DiscountProvider } from "./contexts/DiscountContext";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
 
@@ -10,16 +13,19 @@ function App() {
   return (
     <>
       <AuthProvider>
-        <Router>
-          <Header />
-          <Routes >
+        <ProductProvider>
+          <DiscountProvider>
+            <Router>
+              <Header />
+              <Routes >
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/" element={<h2 className="text-center mt-5">Trang chủ</h2>} />
-          </Routes>
-
-        </Router>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/" element={<HomePage />} />
+              </Routes>
+            </Router>
+          </DiscountProvider>
+        </ProductProvider>
       </AuthProvider>
 
 

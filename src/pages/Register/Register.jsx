@@ -79,8 +79,10 @@ const Register = () => {
                     <Card.Text className="text-center">
                         Create a new account to start shopping.
                     </Card.Text>
+
                     {error && <Alert variant="danger">{error}</Alert>}
                     {success && <Alert variant="success">{success}</Alert>}
+
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
                             <Form.Label>UserName</Form.Label>

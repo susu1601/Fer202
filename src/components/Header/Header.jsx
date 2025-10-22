@@ -7,7 +7,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 const Header = () => {
     const { user, logout } = useContext(AuthContext);
     return (
-        <div className="header">
+        <div className="header" >
             <div className="logo">
                 <Nav.Link as={Link} to="/" className="logo-link">BookStore</Nav.Link>
             </div>
