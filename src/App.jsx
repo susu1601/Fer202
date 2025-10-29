@@ -6,6 +6,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ProductContext, ProductProvider } from "./contexts/ProductContext";
 import { DiscountContext, DiscountProvider } from "./contexts/DiscountContext";
 import HomePage from "./pages/HomePage/HomePage";
+import ShopPage from "./pages/ShopPage/ShopPage";
 
 function App() {
 
@@ -17,16 +18,18 @@ function App() {
           <DiscountProvider>
             <Router>
               <Header />
-              <Routes >
-
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/" element={<HomePage />} />
-              </Routes>
+              <main style={{ marginTop: "100px" }}>
+                <Routes>
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/shop" element={<ShopPage />} />
+                </Routes>
+              </main>
             </Router>
           </DiscountProvider>
         </ProductProvider>
-      </AuthProvider>
+      </AuthProvider >
 
 
 

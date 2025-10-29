@@ -8,10 +8,7 @@ export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [categories, setCategories] = useState([]);
-    const [selectedCategory, setSelectedCategory] = useState(null);
-
-
-
+    const [selectedCategory, setSelectedCategory] = useState("all");
 
     useEffect(() => {
         axios.get("http://localhost:9999/products")

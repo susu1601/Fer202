@@ -2,15 +2,12 @@ import { useEffect, useState } from "react";
 import { createContext } from "react";
 import axios from 'axios';
 
+
 export const DiscountContext = createContext();
 export const DiscountProvider = ({ children }) => {
 
     const [discounts, setDiscounts] = useState([]);
     const [selectedDiscount, setSelectedDiscount] = useState(null);
-
-
-
-
 
     useEffect(() => {
         axios.get("http://localhost:9999/discounts")

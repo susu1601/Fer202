@@ -19,10 +19,10 @@ const BookSection = ({ title, books, discounts }) => {
     };
 
     return (
-        <div className="position-relative my-5" >
+        <div className="position-relative" >
             <h3 className="fw-bold mb-4">{title}</h3>
 
-            {/* Nút trái */}
+
             <Button
                 variant="light"
                 className="position-absolute top-50 start-0 translate-middle-y shadow-sm"
@@ -37,7 +37,7 @@ const BookSection = ({ title, books, discounts }) => {
                 <ChevronLeft />
             </Button>
 
-            {/* Thanh trượt */}
+
             <div
                 ref={scrollRef}
                 className="d-flex pb-3"
@@ -45,11 +45,11 @@ const BookSection = ({ title, books, discounts }) => {
                     overflowX: "auto",
                     scrollBehavior: "smooth",
                     gap: "1rem",
-                    scrollbarWidth: "none", // ẩn thanh scroll trên Firefox
-                    msOverflowStyle: "none", // ẩn trên IE/Edge cũ
+                    scrollbarWidth: "none",
+                    msOverflowStyle: "none",
                 }}
             >
-                {/* ẩn scrollbar trên Chrome/Safari */}
+
                 <style>
                     {`
             div::-webkit-scrollbar {
