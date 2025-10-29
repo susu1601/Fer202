@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
 import { ProductContext } from '../../contexts/ProductContext';
 import { DiscountContext } from './../../contexts/DiscountContext';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const BookSection = ({ title, books, discounts }) => {
     const scrollRef = useRef(null);
@@ -102,7 +103,9 @@ const BookSection = ({ title, books, discounts }) => {
 
                             <Card.Body className="d-flex flex-column justify-content-between">
                                 <div>
-                                    <Card.Title className="fs-6 text-truncate">{book.name}</Card.Title>
+                                    <Card.Title
+                                        as={Link}
+                                        to={`/detail/${book.id}`} className="fs-6 text-truncate">{book.name}</Card.Title>
 
                                     {discountPercentage > 0 ? (
                                         <>
@@ -120,8 +123,8 @@ const BookSection = ({ title, books, discounts }) => {
                                     )}
                                 </div>
 
-                                <Button variant="dark" size="sm" className="w-100 mt-2">
-                                    Book Details
+                                <Button variant="primary" size="sm" className="w-100 mt-2">
+                                    Add to cart
                                 </Button>
                             </Card.Body>
                         </Card>

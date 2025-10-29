@@ -7,6 +7,7 @@ import { ProductContext, ProductProvider } from "./contexts/ProductContext";
 import { DiscountContext, DiscountProvider } from "./contexts/DiscountContext";
 import HomePage from "./pages/HomePage/HomePage";
 import ShopPage from "./pages/ShopPage/ShopPage";
+import DetailPage from './pages/DetailPage/DetailPage';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/register" element={<Register />} />
                   <Route path="/" element={<HomePage />} />
                   <Route path="/shop" element={<ShopPage />} />
+                  <Route path="/detail/:id" element={<DetailPage />} />
                 </Routes>
               </main>
             </Router>

@@ -2,9 +2,10 @@ import React, { useContext, useState } from "react";
 import { Container, Row, Col, Card, Form, Button, Badge } from "react-bootstrap";
 import { ProductContext } from "../../contexts/ProductContext";
 import { DiscountContext } from "../../contexts/DiscountContext";
+import { Link } from 'react-router-dom';
 
 const ShopPage = () => {
-    const { products, categories, selectedCategory, setSelectedCategory } = useContext(ProductContext);
+    const { products, categories, selectedCategory, setSelectedCategory, setSelectedProduct } = useContext(ProductContext);
     const { discounts } = useContext(DiscountContext);
 
     const [sortPrice, setSortPrice] = useState("");
@@ -132,7 +133,12 @@ const ShopPage = () => {
 
                                     <Card.Body className="d-flex flex-column justify-content-between">
                                         <div>
-                                            <Card.Title className="fs-6 text-truncate">{p.name}</Card.Title>
+                                            <Card.Title
+                                                as={Link}
+                                                to={`/detail/${p.id}`}
+                                                className="fs-6 text-truncate"
+                                                onClick={() => setSelectedProduct(p)}
+                                            >{p.name}</Card.Title>
 
                                             {discountPercentage > 0 ? (
                                                 <>
@@ -150,7 +156,7 @@ const ShopPage = () => {
                                             )}
                                         </div>
 
-                                        <Button variant="dark" size="sm" className="w-100 mt-2">
+                                        <Button variant="primary" size="sm" className="w-100 mt-2">
                                             🛒 Add to Cart
                                         </Button>
                                     </Card.Body>
@@ -166,7 +172,7 @@ const ShopPage = () => {
 
             <div className="d-flex justify-content-center mt-4 gap-2">
                 <Button
-                    variant="outline-dark"
+                    variant="outline-primary"
                     disabled={currentPage === 1}
                     onClick={() => setCurrentPage((p) => p - 1)}
                 >
@@ -175,14 +181,14 @@ const ShopPage = () => {
                 {[...Array(totalPages)].map((_, i) => (
                     <Button
                         key={i}
-                        variant={currentPage === i + 1 ? "dark" : "outline-dark"}
+                        variant={currentPage === i + 1 ? "info" : "outline-primary"}
                         onClick={() => setCurrentPage(i + 1)}
                     >
                         {i + 1}
                     </Button>
                 ))}
                 <Button
-                    variant="outline-dark"
+                    variant="outline-primary"
                     disabled={currentPage === totalPages}
                     onClick={() => setCurrentPage((p) => p + 1)}
                 >
