@@ -1,7 +1,7 @@
 {
   "accounts": [
     {
-      "id": 1,
+      "id": "1",
       "username": "john_doe",
       "password": "123456",
       "status": "active",
@@ -11,193 +11,207 @@
       "address": "Ha Noi"
     },
     {
-      "id": 2,
+      "id": "2",
       "username": "jane_doe",
       "password": "123",
-      "status": "inactive",
+      "status": "active",
       "role": "User",
       "email": "user1@gmail.com",
       "phoneNumber": "0246810",
       "address": "Ho Chi Minh"
     },
     {
-      "id": 3,
+      "id": "3",
       "username": "Linh",
       "email": "user2@gmail.com",
       "password": "1234",
       "status": "active",
       "role": "User",
       "phoneNumber": "",
-      "address": ""
+      "address": "Đông Anh"
     }
   ],
   "categories": [
-    { "id": 1, "name": "Comic" },
-    { "id": 2, "name": "Literature" },
-    { "id": 3, "name": "Business" },
-    { "id": 4, "name": "Psychology" },
-    { "id": 5, "name": "Science" }
+    {
+      "id": "1",
+      "name": "Comic"
+    },
+    {
+      "id": "2",
+      "name": "Literature"
+    },
+    {
+      "id": "3",
+      "name": "Business"
+    },
+    {
+      "id": "4",
+      "name": "Psychology"
+    },
+    {
+      "id": "5",
+      "name": "Science"
+    }
   ],
-
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hoa thơm kiêu hãnh",
       "author": "Eiichiro Oda",
       "description": "Một hành trình đầy kịch tính với những pha hành động mãn nhãn và cốt truyện hấp dẫn. Nhân vật chính phải đối mặt với vô số thử thách nguy hiểm để bảo vệ những gì họ trân trọng nhất. Với tranh vẽ sống động và nhịp độ nhanh, đây là cuốn truyện không thể bỏ lỡ cho những ai yêu thích thể loại phiêu lưu.",
       "image": "https://cdn1.fahasa.com/media/catalog/product/n/x/nxbtre_full_07262025_022628_1.jpg",
       "entrydate": "2025-03-14",
       "price": 120000,
-      "quantity": 20,
+      "quantity": 46,
       "categoryId": 2,
       "discountId": 5,
       "isHot": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Naruto Vol. 1",
       "author": "Masashi Kishimoto",
       "description": "Khám phá thế giới đầy màu sắc với những cuộc chiến hoành tráng và kịch bản bất ngờ. Câu chuyện về lòng dũng cảm, tình bạn và sự hy sinh sẽ khiến bạn không thể rời mắt khỏi từng trang truyện.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/92/60/0d/4cc752f39ee344e060061d7cd4250215.jpg.webp",
       "entrydate": "2024-07-02",
       "price": 110000,
-      "quantity": 15,
+      "quantity": 3,
       "categoryId": 1,
       "discountId": 2,
       "isHot": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Attack on Titan Vol. 1",
       "author": "Hajime Isayama",
       "description": "Câu chuyện về những người hùng phi thường với sức mạnh vượt trội, chiến đấu để bảo vệ thế giới khỏi những mối đe dọa tồi tệ nhất. Với nội dung đầy cảm hứng và hình ảnh ấn tượng, đây là món quà tuyệt vời cho mọi fan của thể loại siêu anh hùng.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/ef/69/bf/ab3a8c77b928ec9d3474d9767138ec46.png.webp",
       "entrydate": "2025-01-11",
       "price": 130000,
-      "quantity": 18,
+      "quantity": 2,
       "categoryId": 2,
       "discountId": null,
       "isHot": true
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Demon Slayer Vol. 1",
       "author": "Koyoharu Gotouge",
       "description": "Câu chuyện về những người hùng phi thường với sức mạnh vượt trội, chiến đấu để bảo vệ thế giới khỏi những mối đe dọa tồi tệ nhất. Với nội dung đầy cảm hứng và hình ảnh ấn tượng, đây là món quà tuyệt vời cho mọi fan của thể loại siêu anh hùng.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/cb/30/ed/6c6962dbb870cbf07a6fce675688d79f.png.webp",
       "entrydate": "2025-06-26",
       "price": 125000,
-      "quantity": 12,
+      "quantity": 8,
       "categoryId": 1,
       "discountId": 3,
       "isHot": true
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Spy x Family Vol. 1",
       "author": "Tatsuya Endo",
       "description": "Những câu chuyện đời thường nhẹ nhàng, hài hước về cuộc sống hàng ngày. Với nét vẽ dễ thương và tình huống vui nhộn, đây là cuốn truyện giúp bạn thư giãn và mỉm cười sau những giờ làm việc căng thẳng.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/93/4f/04/0ec6a77855d2d246a5fb0b6d4830ec2e.png.webp",
       "entrydate": "2024-08-30",
       "price": 140000,
-      "quantity": 10,
+      "quantity": 8,
       "categoryId": 3,
       "discountId": 4,
       "isHot": true
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Dragon Ball Vol. 1",
       "author": "Akira Toriyama",
       "description": "“Truyện cổ Gimm” là một trong số ít những tác phẩm được dịch ra nhiều thứ tiếng trên thế giới. Gần hai thế kỉ sắp qua từ ngày tập truyện cổ dân gian Đức do anh em Grimm sưu tầm ra đời, tác phẩm này vẫn là một nguồn cảm hứng dồi dào, mang lại cho bạn đọc niềm vui vô tận, nhắc nhở mọi thế hệ trên toàn cầu một đạo lí nhân bản.Từng nhiều lần xuất bản tuyển tập “Truyện cổ Grimm” trong hơn 50 năm qua, đây được xem bản dịch đầy đủ của bộ truyện cổ đồ sộ này do NXB Kim Đồng phát hành.Ấn bản “Truyện cổ Grim” gồm 4 tập được NXB Kim Đồng in lần này là ấn bản đầy đủ, gồm 201 truyện do anh em Grimm sưu tầm. Ngoài ra, dịch giả còn bổ sung thêm 10 truyện do Bechstein sưu tầm để bạn đọc thấy được sự đa dạng và phong phú của kho tàng truyện cổ tích Đức. Ấn bản lần này cũng có những minh họa sống động của họa sĩ Otto Ubbelohde. Theo dịch giả Lương Văn Hồng, đây là phiên bản khiến ông hài lòng, không chỉ bởi đây là phiên bản đầy đủ, nội dung sách được biên tập kĩ lưỡng, tất cả các tên riêng đã được hiệu chỉnh cho khớp với nguyên bản mà còn bởi hình thức của ấn bản lần này: có minh họa đẹp, in trên giấy đẹp.",
       "image": "https://salt.tikicdn.com/cache/750x750/media/catalog/product/t/r/truyen-co-grim_bia.u5464.d20170801.t154735.279523.jpg.webp",
       "entrydate": "2024-10-09",
       "price": 115000,
-      "quantity": 25,
+      "quantity": 10,
       "categoryId": 4,
       "discountId": 5,
       "isHot": true
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "My Hero Academia Vol. 1",
       "author": "Kohei Horikoshi",
       "description": "“Truyện cổ Gimm” là một trong số ít những tác phẩm được dịch ra nhiều thứ tiếng trên thế giới. Gần hai thế kỉ sắp qua từ ngày tập truyện cổ dân gian Đức do anh em Grimm sưu tầm ra đời, tác phẩm này vẫn là một nguồn cảm hứng dồi dào, mang lại cho bạn đọc niềm vui vô tận, nhắc nhở mọi thế hệ trên toàn cầu một đạo lí nhân bản.Từng nhiều lần xuất bản tuyển tập “Truyện cổ Grimm” trong hơn 50 năm qua, đây được xem bản dịch đầy đủ của bộ truyện cổ đồ sộ này do NXB Kim Đồng phát hành.Ấn bản “Truyện cổ Grim” gồm 4 tập được NXB Kim Đồng in lần này là ấn bản đầy đủ, gồm 201 truyện do anh em Grimm sưu tầm. Ngoài ra, dịch giả còn bổ sung thêm 10 truyện do Bechstein sưu tầm để bạn đọc thấy được sự đa dạng và phong phú của kho tàng truyện cổ tích Đức. Ấn bản lần này cũng có những minh họa sống động của họa sĩ Otto Ubbelohde. Theo dịch giả Lương Văn Hồng, đây là phiên bản khiến ông hài lòng, không chỉ bởi đây là phiên bản đầy đủ, nội dung sách được biên tập kĩ lưỡng, tất cả các tên riêng đã được hiệu chỉnh cho khớp với nguyên bản mà còn bởi hình thức của ấn bản lần này: có minh họa đẹp, in trên giấy đẹp.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/4d/f7/95/e412d5b31903d69e45a5593d1ae886f7.jpg.webp",
       "entrydate": "2025-02-20",
       "price": 135000,
-      "quantity": 17,
+      "quantity": 7,
       "categoryId": 5,
       "discountId": null,
       "isHot": true
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Chainsaw Man Vol. 1",
       "author": "Tatsuki Fujimoto",
       "description": "Ngôi nhà yêu thương” là bộ tuyển thơ, tuyển chọn những vần thơ nho nhỏ về chủ đề gia đình, loài vật; giúp bé thêm yêu mẹ cha, ông bà... và tìm hiểu thế giới xung quanh.Bộ sách in màu toàn bộ trên giấy carton cả bìa và ruột, bế hình ngôi nhà xinh xắn, phù hợp với các bạn nhỏ từ 0-6 tuổi.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/fd/61/49/c9d1295ef857f6a50b7acf9a6dfb49db.jpg.webp",
       "entrydate": "2024-11-15",
       "price": 145000,
-      "quantity": 14,
+      "quantity": 12,
       "categoryId": 1,
       "discountId": 5,
       "isHot": true
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Tokyo Ghoul Vol. 1",
       "author": "Sui Ishida",
       "description": "Hoa nở như thế nào, những chất nào tạo nên bầu khí quyển của chúng ta, hay vì sao các vật chuyển động, tất cả đều là đề tài nghiên cứu của khoa học. Đến với cuốn Bách khoa khoa học,em sẽ bắt đầu chuyến du ngoạn khám phát thế giới khoa học kì thú. Với các hình minh họa trực quan sinh động, bắt mắt, cuốn sách cung cấp một lượng kiến thức phong phú, súc tích, dễ hiểu, cùng những câu hỏi vui, mẩu thông tin thú vị về khoa học. Em sẽ được tìm hiểu từng lĩnh vực mà khoa học nghiên cứu, từ sinh vật học, hóa học, vật lí tới thiên văn học. Bên cạnh đó, em có thể tìm trong cuốn sách các hướng dẫn và gợi ý giúp em thử làm nhà khoa học nhí nữa đấy. Hãy đọc sách và khám phá sự màu nhiệm của khoa học nhé!",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/40/8e/f3/f76d878a1d067ffce2eb8b8bba5a30af.jpg.webp",
       "entrydate": "2024-04-06",
       "price": 150000,
-      "quantity": 13,
+      "quantity": 11,
       "categoryId": 5,
       "discountId": 4,
       "isHot": true
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Death Note Vol. 1",
       "author": "Tsugumi Ohba",
       "description": "Trong cuốn sách mới này, ông bắt đầu với việc khám phá các mô hình khái quát, “hình dạng tổng thể của lịch sử”, bằng cách xem xét chọn lọc quá trình phát triển lâu dài của thế giới. Lần theo những lực tác động thường xuyên thay đổi từ thời kỳ tiền sử đến nay, ông đã cho thấy làm thế nào cả phương Đông và phương Tây, vào những thời điểm khác nhau và bằng nhiều cách khác nhau, đã chuyển hóa lên những tầm phát triển mới. Nhưng thử thách cuối cùng của ông là giải thích được ý nghĩa của tất cả những thăng trầm đó, và hơn thế nữa là đánh giá xem liệu bên nào vốn có sẵn tính ưu việt.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/56/36/b3/5f8ac2a1d5abcf947c3237af67ad8d50.jpg.webp",
       "entrydate": "2025-09-01",
       "price": 160000,
-      "quantity": 19,
+      "quantity": 9,
       "categoryId": 1,
       "discountId": 3,
       "isHot": true
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "description": "STEM là thuật ngữ viết tắt của Science, Technology, Engineering, Mathematics (Khoa học, Công nghệ, Kỹ thuật, Toán học). Bốn lĩnh vực này liên kết với nhau một cách chặt chẽ, không tách rời. Công nghệ và Kỹ thuật lấy ý tưởng từ những phát kiến mới về Khoa học để cuộc sống của chúng ta được dễ dàng và giúp thế giới trở nên tươi đẹp hơn. Tuy nhiên, Toán học được xem là yếu tố quan trọng nhất và không nhà khoa học hoặc kỹ sư nào có thể hoàn thành công việc mà không nhờ cậy đến Toán học.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/f3/f8/ce/dfd47f17c4965803cf946d12b7b9c76b.jpg.webp",
       "entrydate": "2024-04-22",
       "price": 100000,
-      "quantity": 10,
+      "quantity": 50,
       "categoryId": 3,
       "discountId": 2,
       "isHot": true
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Pride and Prejudice",
       "author": "Jane Austen",
       "description": "Cuốn sách Nhà khoa học tập sự Tìm hiểu về công việc của những nhà khoa học. Học cách trở thành nhà khoa học trong cuốn sách thú vị này! Với những thông tin hấp dẫn về thời tiết, động thực vật, vòng tuần hoàn của nước…, Nhà khoa học tập sự sẽ cho bạn biết về những kiến thức, kỹ năng và công việc của một nhà khoa học. Các hoạt động đơn giản sẽ kiểm tra kỹ năng của bạn và củng cố thông tin bạn đọc trong sách. Bạn muốn đi khai quật hóa thạch của khủng long, theo dõi vòng tuần hoàn của nước hay đi thăm nhà máy điện? Hãy cùng tìm hiểu nhé!",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/54/12/6f/f36187c5aadf0176a50e436c5fe2829e.jpg.webp",
       "entrydate": "2025-06-08",
       "price": 120000,
-      "quantity": 14,
+      "quantity": 12,
       "categoryId": 2,
       "discountId": 1,
       "isHot": false
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Sách Siêu Nhí Hỏi Nhà Khoa Học Trả Lời ",
       "author": "George Orwell",
       "description": "Tại sao bầu trời có màu xanh?”, “Tại sao các ngôi sao lấp lánh?’’, “Tại sao nước sủi bọt khi sôi?” hay “Tại sao chúng ta đổ mồ hôi khi vận động?” Trẻ con quan sát thế giới xung quanh và luôn luôn đặt câu hỏi về những băn khoăn của mình. Đây là điều mà người trưởng thành không dễ dàng làm được. Tất cả các câu hỏi đều được trả lời rõ ràng và sống động. Siêu nhí hỏi – nhà khoa học trả lời chắc chắn sẽ đem đến một thế giới khoa học đầy niềm vui, hài hước, thú vị, làm thỏa mãn trí tò mò của các nhà khoa học nhí.",
@@ -210,7 +224,7 @@
       "isHot": false
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "description": "Thiên nhiên có bao điều kì diệu đang chờ em khám phá. Em có biết chỉ một khoảnh vườn đã là nơi sinh sống của vô số sinh vật, từ những loài nhỏ xíu em không nhìn thấy được, tới cây cỏ hoa lá và rất nhiều loài vật khác chứ? Bách khoa tự nhiên sẽ giúp em hiểu thêm về thế giới kì thú quanh ta! Với các hình minh họa trực quan sinh động, bắt mắt, cuốn sách cung cấp một lượng kiến thức phong phú, súc tích, dễ hiểu, cùng những câu hỏi vui, mẩu thông tin thú vị về thế giới xung quanh. Em sẽ được biết đến cách các loài động thực vật sinh tồn thế nào ở mọi nơi trên Trái đất, từ những hoang mạc khô cằn, tới những cánh rừng mưa tươi tốt.",
@@ -223,7 +237,7 @@
       "isHot": false
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Jane Eyre",
       "author": "Charlotte Brontë",
       "description": "Thế giới tự nhiên có biết bao nhiêu điều kì lạ. Và với các em nhỏ, chắc chắn có biết bao nhiêu câu hỏi vì sao về thiên nhiên muôn màu xung quanh. Cuốn sách này không chỉ đưa ra lời giải đáp mà còn có những hình minh họa bắt mắt và sinh động. Không chỉ có vậy, trong sách còn có Cửa sổ Kiến thức với thông tin phong phú và Phòng Thông minh giúp bé tự kiểm tra kiến thức của mình.",
@@ -236,7 +250,7 @@
       "isHot": false
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Wuthering Heights",
       "author": "Emily Brontë",
       "description": "Sử dụng các tác phẩm đồ họa máy tính ngoạn mục, Tri thức về vạn vật sẽ hé lộ những chi tiết kỳ diệu chưa từng thấy về vũ trụ, Trái đất, thiên nhiên, cơ thể người, khoa học và lịch sử. Trọn vẹn những sự thật kinh ngạc, dòng thời gian sinh động và hình ảnh ấn tượng, cuốn bách khoa thư gia đình đầy hấp dẫn này sẽ biến những chủ đề phức tạp nhất hóa dễ dàng chỉ trong nháy mắt",
@@ -248,7 +262,7 @@
       "discountId": 3
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "description": "Có hề gì đâu bao nhiêu là hắt hủi, đánh mắng, vì Zezé đã có một người bạn đặc biệt để trút nỗi lòng: cây cam ngọt nơi vườn sau. Và cả một người bạn nữa, bằng xương bằng thịt, một ngày kia xuất hiện, cho cậu bé nhạy cảm khôn sớm biết thế nào là trìu mến, thế nào là nỗi đau, và mãi mãi thay đổi cuộc đời cậu. Mở đầu bằng những thanh âm trong sáng và kết thúc lắng lại trong những nốt trầm hoài niệm, Cây cam ngọt của tôi khiến ta nhận ra vẻ đẹp thực sự của cuộc sống đến từ những điều giản dị như bông hoa trắng của cái cây sau nhà, và rằng cuộc đời thật khốn khổ nếu thiếu đi lòng yêu thương và niềm trắc ẩn. Cuốn sách kinh điển này bởi thế không ngừng khiến trái tim người đọc khắp thế giới thổn thức, kể từ khi ra mắt lần đầu năm 1968 tại Brazil.",
@@ -260,7 +274,7 @@
       "discountId": 4
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Moby Dick",
       "author": "Herman Melville",
       "description": "Epic sea adventure",
@@ -272,7 +286,7 @@
       "discountId": 5
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "The Odyssey",
       "author": "Homer",
       "description": "Greek epic poem",
@@ -284,7 +298,7 @@
       "discountId": null
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Les Misérables",
       "author": "Victor Hugo",
       "description": "Revolutionary France tale",
@@ -296,7 +310,7 @@
       "discountId": 1
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Rich Dad Poor Dad",
       "author": "Robert Kiyosaki",
       "description": "Financial education",
@@ -308,7 +322,7 @@
       "discountId": 2
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "The Highly Effective People",
       "author": "Stephen Covey",
       "description": "Leadership and success",
@@ -320,7 +334,7 @@
       "discountId": null
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Start with Why",
       "author": "Simon Sinek",
       "description": "Purpose-driven leadership",
@@ -332,7 +346,7 @@
       "discountId": null
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "The Lean Startup",
       "author": "Eric Ries",
       "description": "Building startups efficiently",
@@ -344,7 +358,7 @@
       "discountId": null
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Zero to One",
       "author": "Peter Thiel",
       "description": "Innovation and startup strategy",
@@ -356,7 +370,7 @@
       "discountId": null
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "The Millionaire Next Door",
       "author": "Thomas Stanley",
       "description": "Habits of wealthy people",
@@ -368,7 +382,7 @@
       "discountId": null
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Think and Grow Rich",
       "author": "Napoleon Hill",
       "description": "Classic motivational book",
@@ -380,7 +394,7 @@
       "discountId": null
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "The E-Myth Revisited",
       "author": "Michael Gerber",
       "description": "Small business success guide",
@@ -392,7 +406,7 @@
       "discountId": null
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Good to Great",
       "author": "Jim Collins",
       "description": "Why some companies thrive",
@@ -404,31 +418,31 @@
       "discountId": null
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "The Intelligent Investor",
       "author": "Benjamin Graham",
       "description": "Investment classic",
       "image": "intelligentinvestor.jpg",
       "entrydate": "2025-09-16",
       "price": 170000,
-      "quantity": 9,
+      "quantity": 7,
       "categoryId": 3,
       "discountId": null
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Thinking, Fast and Slow",
       "author": "Daniel Kahneman",
       "description": "Cognitive biases and decision-making",
       "image": "thinkingfastslow.jpg",
       "entrydate": "2024-07-14",
       "price": 140000,
-      "quantity": 15,
+      "quantity": 14,
       "categoryId": 4,
       "discountId": null
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Man’s Search for Meaning",
       "author": "Viktor Frankl",
       "description": "Psychology and purpose",
@@ -440,7 +454,7 @@
       "discountId": null
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Atomic Habits",
       "author": "James Clear",
       "description": "Building good habits",
@@ -452,31 +466,31 @@
       "discountId": null
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "The Power of Habit",
       "author": "Charles Duhigg",
       "description": "How habits shape behavior",
       "image": "powerhabit.jpg",
       "entrydate": "2024-09-26",
       "price": 145000,
-      "quantity": 13,
+      "quantity": 12,
       "categoryId": 4,
       "discountId": null
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Emotional Intelligence",
       "author": "Daniel Goleman",
       "description": "Understanding emotions",
       "image": "eq.jpg",
       "entrydate": "2025-08-09",
       "price": 130000,
-      "quantity": 17,
+      "quantity": 15,
       "categoryId": 4,
       "discountId": null
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Quiet",
       "author": "Susan Cain",
       "description": "Power of introverts",
@@ -488,7 +502,7 @@
       "discountId": null
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Flow",
       "author": "Mihaly Csikszentmihalyi",
       "description": "State of optimal experience",
@@ -500,7 +514,7 @@
       "discountId": null
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "The Body Keeps the Score",
       "author": "Bessel van der Kolk",
       "description": "Trauma and healing",
@@ -512,7 +526,7 @@
       "discountId": null
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Drive",
       "author": "Daniel Pink",
       "description": "Motivation psychology",
@@ -524,7 +538,7 @@
       "discountId": null
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Thinking in Bets",
       "author": "Annie Duke",
       "description": "Decision making under uncertainty",
@@ -536,19 +550,19 @@
       "discountId": null
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "A Brief History of Time",
       "author": "Stephen Hawking",
       "description": "Cosmology and the universe",
       "image": "briefhistory.jpg",
       "entrydate": "2025-09-23",
       "price": 150000,
-      "quantity": 14,
+      "quantity": 12,
       "categoryId": 5,
       "discountId": 2
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "The Selfish Gene",
       "author": "Richard Dawkins",
       "description": "Evolutionary biology",
@@ -560,19 +574,18 @@
       "discountId": null
     }
   ],
-
   "discounts": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Summer Sale",
       "code": "SUMMER20",
       "amountPercentage": 20,
       "startDate": "2025-06-01",
-      "endDate": "2025-06-30",
+      "endDate": "2025-12-01",
       "isActive": false
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Fall Sale",
       "code": "FALL25",
       "amountPercentage": 20,
@@ -581,25 +594,25 @@
       "isActive": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "New Year Blast",
       "code": "NY2025",
       "amountPercentage": 30,
       "startDate": "2025-12-25",
-      "endDate": "2026-01-10",
-      "isActive": false
+      "endDate": "2026-12-10",
+      "isActive": true
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Spring Festival",
       "code": "SPRING15",
       "amountPercentage": 15,
       "startDate": "2025-03-01",
-      "endDate": "2025-03-31",
-      "isActive": false
+      "endDate": "2025-12-31",
+      "isActive": true
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Black Friday Madness",
       "code": "BLACK50",
       "amountPercentage": 50,
@@ -608,61 +621,661 @@
       "isActive": true
     }
   ],
-
   "carts": [
     {
-      "id": 1,
-      "customerId": 1,
-      "createDate": "2025-05-01",
-      "totalAmount": 300.5
+      "id": "5218",
+      "customerId": "3",
+      "totalAmount": 60000
+    },
+    {
+      "id": "5a45",
+      "customerId": "6906b706511afb5f9ad1f730",
+      "totalAmount": 0
+    },
+    {
+      "id": "4d0c",
+      "customerId": "6906b706511afb5f9ad1f730",
+      "totalAmount": 252500
     }
   ],
   "cartDetails": [
     {
-      "cartId": 1,
-      "productId": 1,
-      "quantity": 1
+      "id": "34a4",
+      "cartId": "4d0c",
+      "productId": "1",
+      "quantity": 1,
+      "price": 60000
     },
     {
-      "cartId": 1,
-      "productId": 2,
-      "quantity": 2
+      "id": "a51a",
+      "cartId": "4d0c",
+      "productId": "8",
+      "quantity": 1,
+      "price": 72500
+    },
+    {
+      "id": "b42f",
+      "cartId": "4d0c",
+      "productId": "12",
+      "quantity": 1,
+      "price": 120000
     }
   ],
   "orders": [
     {
-      "id": 1,
-      "customerId": 1,
-      "shippingAddress": "12 Ton That Thuyet",
-      "totalAmount": 300.5,
-      "orderDate": "2025-05-03",
-      "paymentMethod": "Credit Card",
-      "shippingMethod": "Standard",
-      "shippingCost": 20,
-      "paymentStatus": "Paid",
-      "staffId": 1,
-      "status": "Delivered"
+      "id": "758a",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 148000
+    },
+    {
+      "id": "fad5",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 145500
+    },
+    {
+      "id": "f055",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 88000
+    },
+    {
+      "id": "bd4f",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 246500
+    },
+    {
+      "id": "d1f1",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 231000
+    },
+    {
+      "id": "f5a1",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 247500
+    },
+    {
+      "id": "7c38",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 704000
+    },
+    {
+      "id": "6705",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 275000
+    },
+    {
+      "id": "01f2",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 456000
+    },
+    {
+      "id": "d0e4",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 562000
+    },
+    {
+      "id": "d5d7",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 562000
+    },
+    {
+      "id": "bcdb",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 562000
+    },
+    {
+      "id": "6b64",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 562000
+    },
+    {
+      "id": "0ae6",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 674000
+    },
+    {
+      "id": "d8b3",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 296000
+    },
+    {
+      "id": "1053",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 296000
+    },
+    {
+      "id": "7b4c",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 296000
+    },
+    {
+      "id": "8c6a",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 57500
+    },
+    {
+      "id": "046c",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 327500
+    },
+    {
+      "id": "7d75",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 385000
+    },
+    {
+      "id": "7db0",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 385000
+    },
+    {
+      "id": "07b0",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 385000
+    },
+    {
+      "id": "542f",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 307500
+    },
+    {
+      "id": "5108",
+      "userId": 3,
+      "date": "2025-11-01",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 440000
+    },
+    {
+      "id": "12e9",
+      "userId": 3,
+      "date": "2025-11-02",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 325000
+    },
+    {
+      "id": "b710",
+      "userId": 3,
+      "date": "2025-11-03",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 208000
+    },
+    {
+      "id": "ed89",
+      "userId": 3,
+      "date": "2025-11-03",
+      "shippingAddress": "Đông Anh",
+      "status": "Đang xử lý",
+      "totalAmount": 60000
     }
   ],
   "orderDetails": [
     {
-      "productId": 1,
-      "orderId": 1,
+      "id": "fcdd",
+      "orderId": "758a",
+      "productId": "2",
       "quantity": 1,
-      "price": 250,
-      "discount": 20
+      "price": 88000
     },
     {
-      "productId": 2,
-      "orderId": 1,
+      "id": "b27e",
+      "orderId": "758a",
+      "productId": "1",
+      "quantity": 1,
+      "price": 60000
+    },
+    {
+      "id": "2dbd",
+      "orderId": "fad5",
+      "productId": "2",
+      "quantity": 1,
+      "price": 88000
+    },
+    {
+      "id": "46ee",
+      "orderId": "fad5",
+      "productId": "6",
+      "quantity": 1,
+      "price": 57500
+    },
+    {
+      "id": "97bd",
+      "orderId": "f055",
+      "productId": "2",
+      "quantity": 1,
+      "price": 88000
+    },
+    {
+      "id": "5d75",
+      "orderId": "bd4f",
+      "productId": "5",
+      "quantity": 1,
+      "price": 119000
+    },
+    {
+      "id": "66d0",
+      "orderId": "bd4f",
+      "productId": "9",
+      "quantity": 1,
+      "price": 127500
+    },
+    {
+      "id": "4479",
+      "orderId": "d1f1",
+      "productId": "5",
+      "quantity": 1,
+      "price": 119000
+    },
+    {
+      "id": "0e3b",
+      "orderId": "d1f1",
+      "productId": "10",
+      "quantity": 1,
+      "price": 112000
+    },
+    {
+      "id": "5ef9",
+      "orderId": "f5a1",
+      "productId": "12",
+      "quantity": 1,
+      "price": 120000
+    },
+    {
+      "id": "6c39",
+      "orderId": "f5a1",
+      "productId": "9",
+      "quantity": 1,
+      "price": 127500
+    },
+    {
+      "id": "8ec2",
+      "orderId": "7c38",
+      "productId": "2",
+      "quantity": 8,
+      "price": 88000
+    },
+    {
+      "id": "2ae4",
+      "orderId": "6705",
+      "productId": "35",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "0120",
+      "orderId": "6705",
+      "productId": "34",
+      "quantity": 1,
+      "price": 145000
+    },
+    {
+      "id": "e7fe",
+      "orderId": "01f2",
+      "productId": "10",
+      "quantity": 3,
+      "price": 112000
+    },
+    {
+      "id": "6912",
+      "orderId": "01f2",
+      "productId": "12",
+      "quantity": 1,
+      "price": 120000
+    },
+    {
+      "id": "6e38",
+      "orderId": "d0e4",
+      "productId": "11",
+      "quantity": 4,
+      "price": 80000
+    },
+    {
+      "id": "a63a",
+      "orderId": "d0e4",
+      "productId": "10",
+      "quantity": 1,
+      "price": 112000
+    },
+    {
+      "id": "1298",
+      "orderId": "d0e4",
+      "productId": "3",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "8487",
+      "orderId": "d5d7",
+      "productId": "11",
+      "quantity": 4,
+      "price": 80000
+    },
+    {
+      "id": "75f3",
+      "orderId": "d5d7",
+      "productId": "10",
+      "quantity": 1,
+      "price": 112000
+    },
+    {
+      "id": "d1f1",
+      "orderId": "d5d7",
+      "productId": "3",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "e377",
+      "orderId": "bcdb",
+      "productId": "11",
+      "quantity": 4,
+      "price": 80000
+    },
+    {
+      "id": "aab8",
+      "orderId": "bcdb",
+      "productId": "10",
+      "quantity": 1,
+      "price": 112000
+    },
+    {
+      "id": "9bfa",
+      "orderId": "bcdb",
+      "productId": "3",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "5af5",
+      "orderId": "6b64",
+      "productId": "11",
+      "quantity": 4,
+      "price": 80000
+    },
+    {
+      "id": "094a",
+      "orderId": "6b64",
+      "productId": "3",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "5633",
+      "orderId": "6b64",
+      "productId": "10",
+      "quantity": 1,
+      "price": 112000
+    },
+    {
+      "id": "30d2",
+      "orderId": "0ae6",
+      "productId": "11",
+      "quantity": 4,
+      "price": 80000
+    },
+    {
+      "id": "a415",
+      "orderId": "0ae6",
+      "productId": "3",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "690f",
+      "orderId": "0ae6",
+      "productId": "10",
       "quantity": 2,
-      "price": 25,
-      "discount": 0
+      "price": 112000
+    },
+    {
+      "id": "0861",
+      "orderId": "d8b3",
+      "productId": "1",
+      "quantity": 2,
+      "price": 60000
+    },
+    {
+      "id": "d27a",
+      "orderId": "d8b3",
+      "productId": "2",
+      "quantity": 2,
+      "price": 88000
+    },
+    {
+      "id": "c45a",
+      "orderId": "1053",
+      "productId": "1",
+      "quantity": 2,
+      "price": 60000
+    },
+    {
+      "id": "4c9e",
+      "orderId": "1053",
+      "productId": "2",
+      "quantity": 2,
+      "price": 88000
+    },
+    {
+      "id": "fe6a",
+      "orderId": "7b4c",
+      "productId": "1",
+      "quantity": 2,
+      "price": 60000
+    },
+    {
+      "id": "c824",
+      "orderId": "7b4c",
+      "productId": "2",
+      "quantity": 2,
+      "price": 88000
+    },
+    {
+      "id": "a69a",
+      "orderId": "8c6a",
+      "productId": "6",
+      "quantity": 1,
+      "price": 57500
+    },
+    {
+      "id": "3968",
+      "orderId": "046c",
+      "productId": "6",
+      "quantity": 1,
+      "price": 57500
+    },
+    {
+      "id": "149e",
+      "orderId": "046c",
+      "productId": "7",
+      "quantity": 2,
+      "price": 135000
+    },
+    {
+      "id": "8916",
+      "orderId": "7d75",
+      "productId": "6",
+      "quantity": 2,
+      "price": 57500
+    },
+    {
+      "id": "de4e",
+      "orderId": "7d75",
+      "productId": "7",
+      "quantity": 2,
+      "price": 135000
+    },
+    {
+      "id": "e755",
+      "orderId": "7db0",
+      "productId": "6",
+      "quantity": 2,
+      "price": 57500
+    },
+    {
+      "id": "7d26",
+      "orderId": "7db0",
+      "productId": "7",
+      "quantity": 2,
+      "price": 135000
+    },
+    {
+      "id": "3391",
+      "orderId": "07b0",
+      "productId": "6",
+      "quantity": 2,
+      "price": 57500
+    },
+    {
+      "id": "4ceb",
+      "orderId": "07b0",
+      "productId": "7",
+      "quantity": 2,
+      "price": 135000
+    },
+    {
+      "id": "557b",
+      "orderId": "542f",
+      "productId": "6",
+      "quantity": 3,
+      "price": 57500
+    },
+    {
+      "id": "9f9d",
+      "orderId": "542f",
+      "productId": "7",
+      "quantity": 1,
+      "price": 135000
+    },
+    {
+      "id": "944e",
+      "orderId": "5108",
+      "productId": "35",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "5039",
+      "orderId": "5108",
+      "productId": "30",
+      "quantity": 1,
+      "price": 170000
+    },
+    {
+      "id": "0166",
+      "orderId": "5108",
+      "productId": "31",
+      "quantity": 1,
+      "price": 140000
+    },
+    {
+      "id": "4985",
+      "orderId": "12e9",
+      "productId": "1",
+      "quantity": 3,
+      "price": 60000
+    },
+    {
+      "id": "9345",
+      "orderId": "12e9",
+      "productId": "8",
+      "quantity": 2,
+      "price": 72500
+    },
+    {
+      "id": "bdea",
+      "orderId": "b710",
+      "productId": "2",
+      "quantity": 1,
+      "price": 88000
+    },
+    {
+      "id": "259b",
+      "orderId": "b710",
+      "productId": "41",
+      "quantity": 1,
+      "price": 120000
+    },
+    {
+      "id": "0a31",
+      "orderId": "ed89",
+      "productId": "1",
+      "quantity": 1,
+      "price": 60000
     }
   ],
   "feedbacks": [
     {
-      "id": 1,
+      "id": "1",
       "customerId": 1,
       "orderId": 1,
       "rating": 5,

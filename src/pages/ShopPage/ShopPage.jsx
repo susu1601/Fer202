@@ -1,13 +1,28 @@
 import React, { useContext, useState } from "react";
-import { Container, Row, Col, Card, Form, Button, Badge } from "react-bootstrap";
+import {
+    Container,
+    Row,
+    Col,
+    Card,
+    Form,
+    Button,
+    Badge,
+} from "react-bootstrap";
 import { ProductContext } from "../../contexts/ProductContext";
 import { DiscountContext } from "../../contexts/DiscountContext";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 
 const ShopPage = () => {
-    const { products, categories, selectedCategory, setSelectedCategory, setSelectedProduct } = useContext(ProductContext);
+    const {
+        products,
+        categories,
+        selectedCategory,
+        setSelectedCategory,
+        setSelectedProduct,
+    } = useContext(ProductContext);
     const { discounts } = useContext(DiscountContext);
-
+    const { addToCart } = useContext(CartContext);
     const [sortPrice, setSortPrice] = useState("");
     const [sortName, setSortName] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
@@ -15,19 +30,18 @@ const ShopPage = () => {
 
     const itemsPerPage = 12;
 
-
-
     const filteredProducts = products
         .filter((p) => {
             if (selectedCategory === "all") return true;
-            const category = categories.find((c) => c.id === p.categoryId);
+            const category = categories.find((c) => Number(c.id) === p.categoryId);
             return category?.name === selectedCategory;
         })
         .filter((p) => p.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
-
     let sortedProducts = [...filteredProducts].map((p) => {
-        const discount = discounts.find((d) => d.id === p.discountId && d.isActive);
+        const discount = discounts.find(
+            (d) => Number(d.id) === p.discountId && d.isActive
+        );
         const discountPercentage = discount ? discount.amountPercentage : 0;
         const finalPrice = discountPercentage
             ? Math.round(p.price * (1 - discountPercentage / 100))
@@ -35,23 +49,25 @@ const ShopPage = () => {
         return { ...p, finalPrice };
     });
 
+    if (sortName === "name-asc")
+        sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+    if (sortName === "name-desc")
+        sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
 
-    if (sortName === "name-asc") sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
-    if (sortName === "name-desc") sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
-
-
-    if (sortPrice === "price-asc") sortedProducts.sort((a, b) => a.finalPrice - b.finalPrice);
-    if (sortPrice === "price-desc") sortedProducts.sort((a, b) => b.finalPrice - a.finalPrice);
-
+    if (sortPrice === "price-asc")
+        sortedProducts.sort((a, b) => a.finalPrice - b.finalPrice);
+    if (sortPrice === "price-desc")
+        sortedProducts.sort((a, b) => b.finalPrice - a.finalPrice);
 
     const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const paginatedProducts = sortedProducts.slice(startIndex, startIndex + itemsPerPage);
-
+    const paginatedProducts = sortedProducts.slice(
+        startIndex,
+        startIndex + itemsPerPage
+    );
     return (
         <Container className="my-5" style={{ minHeight: "80vh" }}>
             <h2 className="fw-bold mb-4 text-center">🛍️ Our Shop</h2>
-
 
             <Row className="mb-4 align-items-center g-2">
                 <Col md={3}>
@@ -59,9 +75,9 @@ const ShopPage = () => {
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
                     >
-                        <option value={'all'}>All Categories</option>
+                        <option value={"all"}>All Categories</option>
                         {categories.map((cat) => (
-                            <option key={cat} value={cat.name}>
+                            <option key={cat.id} value={cat.name}>
                                 {cat.name}
                             </option>
                         ))}
@@ -69,7 +85,10 @@ const ShopPage = () => {
                 </Col>
 
                 <Col md={3}>
-                    <Form.Select value={sortPrice} onChange={(e) => setSortPrice(e.target.value)}>
+                    <Form.Select
+                        value={sortPrice}
+                        onChange={(e) => setSortPrice(e.target.value)}
+                    >
                         <option value="">Sort by Price...</option>
                         <option value="price-asc">Low → High</option>
                         <option value="price-desc">High → Low</option>
@@ -77,7 +96,10 @@ const ShopPage = () => {
                 </Col>
 
                 <Col md={3}>
-                    <Form.Select value={sortName} onChange={(e) => setSortName(e.target.value)}>
+                    <Form.Select
+                        value={sortName}
+                        onChange={(e) => setSortName(e.target.value)}
+                    >
                         <option value="">Sort by Name...</option>
                         <option value="name-asc">A → Z</option>
                         <option value="name-desc">Z → A</option>
@@ -94,13 +116,13 @@ const ShopPage = () => {
                 </Col>
             </Row>
 
-
             <Row>
                 {paginatedProducts.length > 0 ? (
                     paginatedProducts.map((p) => {
-                        const discount = discounts.find((d) => d.id === p.discountId && d.isActive);
+                        const discount = discounts.find(
+                            (d) => Number(d.id) === p.discountId && d.isActive
+                        );
                         const discountPercentage = discount ? discount.amountPercentage : 0;
-
 
                         return (
                             <Col key={p.id} md={3} sm={6} className="mb-4">
@@ -138,7 +160,9 @@ const ShopPage = () => {
                                                 to={`/detail/${p.id}`}
                                                 className="fs-6 text-truncate"
                                                 onClick={() => setSelectedProduct(p)}
-                                            >{p.name}</Card.Title>
+                                            >
+                                                {p.name}
+                                            </Card.Title>
 
                                             {discountPercentage > 0 ? (
                                                 <>
@@ -154,9 +178,16 @@ const ShopPage = () => {
                                                     {p.price.toLocaleString()} VND
                                                 </Card.Text>
                                             )}
+
+                                            <Card.Text>Số lượng : {p.quantity}</Card.Text>
                                         </div>
 
-                                        <Button variant="primary" size="sm" className="w-100 mt-2">
+                                        <Button
+                                            variant="primary"
+                                            size="sm"
+                                            className="w-100 mt-2"
+                                            onClick={() => addToCart(p)}
+                                        >
                                             🛒 Add to Cart
                                         </Button>
                                     </Card.Body>
@@ -168,7 +199,6 @@ const ShopPage = () => {
                     <p className="text-center mt-5">No products found 🥲</p>
                 )}
             </Row>
-
 
             <div className="d-flex justify-content-center mt-4 gap-2">
                 <Button

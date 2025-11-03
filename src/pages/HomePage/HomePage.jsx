@@ -1,11 +1,13 @@
-import React, { useContext, useRef } from 'react';
-import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
-import { ProductContext } from '../../contexts/ProductContext';
-import { DiscountContext } from './../../contexts/DiscountContext';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useRef } from "react";
+import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
+import { ProductContext } from "../../contexts/ProductContext";
+import { DiscountContext } from "./../../contexts/DiscountContext";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 
 const BookSection = ({ title, books, discounts }) => {
+    const { addToCart } = useContext(CartContext);
     const scrollRef = useRef(null);
 
     const scroll = (direction) => {
@@ -13,16 +15,18 @@ const BookSection = ({ title, books, discounts }) => {
             const { scrollLeft, clientWidth } = scrollRef.current;
             const scrollAmount = clientWidth * 0.8;
             scrollRef.current.scrollTo({
-                left: direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount,
+                left:
+                    direction === "left"
+                        ? scrollLeft - scrollAmount
+                        : scrollLeft + scrollAmount,
                 behavior: "smooth",
             });
         }
     };
 
     return (
-        <div className="position-relative" >
+        <div className="position-relative">
             <h3 className="fw-bold mb-4">{title}</h3>
-
 
             <Button
                 variant="light"
@@ -38,7 +42,6 @@ const BookSection = ({ title, books, discounts }) => {
                 <ChevronLeft />
             </Button>
 
-
             <div
                 ref={scrollRef}
                 className="d-flex pb-3"
@@ -50,7 +53,6 @@ const BookSection = ({ title, books, discounts }) => {
                     msOverflowStyle: "none",
                 }}
             >
-
                 <style>
                     {`
             div::-webkit-scrollbar {
@@ -60,15 +62,17 @@ const BookSection = ({ title, books, discounts }) => {
                 </style>
 
                 {books.map((book) => {
-                    const discount = discounts.find((d) => d.id === book.discountId && d.isActive);
+                    const discount = discounts.find(
+                        (d) => Number(d.id) === book.discountId && d.isActive
+                    );
                     const discountPercentage = discount ? discount.amountPercentage : 0;
+
                     const finalPrice = discountPercentage
                         ? Math.round(book.price * (1 - discountPercentage / 100))
                         : book.price;
 
                     return (
                         <Card
-
                             key={book.id}
                             className="shadow-sm position-relative flex-shrink-0 d-flex flex-column justify-content-between"
                             style={{
@@ -76,8 +80,7 @@ const BookSection = ({ title, books, discounts }) => {
                                 minWidth: "220px",
                                 borderRadius: "12px",
                                 height: "380px",
-                                backgroundColor: "antiquewhite"
-
+                                backgroundColor: "antiquewhite",
                             }}
                         >
                             {discountPercentage > 0 && (
@@ -105,7 +108,11 @@ const BookSection = ({ title, books, discounts }) => {
                                 <div>
                                     <Card.Title
                                         as={Link}
-                                        to={`/detail/${book.id}`} className="fs-6 text-truncate">{book.name}</Card.Title>
+                                        to={`/detail/${book.id}`}
+                                        className="fs-6 text-truncate"
+                                    >
+                                        {book.name}
+                                    </Card.Title>
 
                                     {discountPercentage > 0 ? (
                                         <>
@@ -123,8 +130,13 @@ const BookSection = ({ title, books, discounts }) => {
                                     )}
                                 </div>
 
-                                <Button variant="primary" size="sm" className="w-100 mt-2">
-                                    Add to cart
+                                <Button
+                                    variant="primary"
+                                    size="sm"
+                                    className="w-100 mt-2"
+                                    onClick={() => addToCart(book)}
+                                >
+                                    🛒 Add to Cart
                                 </Button>
                             </Card.Body>
                         </Card>
@@ -162,21 +174,38 @@ const HomePage = () => {
 
     const topDiscountProducts = products
         .filter((p) => {
-            const discount = discounts.find((d) => d.id === p.discountId && d.isActive);
+            const discount = discounts.find(
+                (d) => Number(d.id) === p.discountId && d.isActive
+            );
+
             return discount;
         })
         .sort((a, b) => {
-            const discA = discounts.find((d) => d.id === a.discountId)?.amountPercentage || 0;
-            const discB = discounts.find((d) => d.id === b.discountId)?.amountPercentage || 0;
+            const discA =
+                discounts.find((d) => d.id === a.discountId)?.amountPercentage || 0;
+            const discB =
+                discounts.find((d) => d.id === b.discountId)?.amountPercentage || 0;
             return discB - discA;
         })
         .slice(0, 10);
 
     return (
-        <Container className="my-5 " >
-            <BookSection title="📚 New Book" books={newProducts} discounts={discounts} />
-            <BookSection title="🔥 Hot Book" books={hotProducts} discounts={discounts} />
-            <BookSection title="💸 Discount Book" books={topDiscountProducts} discounts={discounts} />
+        <Container className="my-5 ">
+            <BookSection
+                title="📚 New Book"
+                books={newProducts}
+                discounts={discounts}
+            />
+            <BookSection
+                title="🔥 Hot Book"
+                books={hotProducts}
+                discounts={discounts}
+            />
+            <BookSection
+                title="💸 Discount Book"
+                books={topDiscountProducts}
+                discounts={discounts}
+            />
         </Container>
     );
 };
