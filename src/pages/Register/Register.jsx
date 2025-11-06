@@ -3,6 +3,7 @@ import { Card, Form, Button, Alert } from 'react-bootstrap';
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from '../../components/Header/Header';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -73,6 +74,7 @@ const Register = () => {
 
     return (
         <div id="register-form" style={{ maxWidth: '600px', margin: 'auto', marginTop: '200px' }}>
+            <Header />
             <Card>
                 <Card.Body>
                     <Card.Title className="text-center" style={{ fontSize: '30px' }}><strong>Register</strong></Card.Title>

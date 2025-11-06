@@ -5,6 +5,7 @@ import { DiscountContext } from "./../../contexts/DiscountContext";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
+import Header from "../../components/Header/Header";
 
 const BookSection = ({ title, books, discounts }) => {
     const { addToCart } = useContext(CartContext);
@@ -190,23 +191,28 @@ const HomePage = () => {
         .slice(0, 10);
 
     return (
-        <Container className="my-5 ">
-            <BookSection
-                title="📚 New Book"
-                books={newProducts}
-                discounts={discounts}
-            />
-            <BookSection
-                title="🔥 Hot Book"
-                books={hotProducts}
-                discounts={discounts}
-            />
-            <BookSection
-                title="💸 Discount Book"
-                books={topDiscountProducts}
-                discounts={discounts}
-            />
-        </Container>
+        <>
+            <Header />
+            <Container className="my-5 ">
+
+                <BookSection
+                    title="📚 New Book"
+                    books={newProducts}
+                    discounts={discounts}
+                />
+                <BookSection
+                    title="🔥 Hot Book"
+                    books={hotProducts}
+                    discounts={discounts}
+                />
+                <BookSection
+                    title="💸 Discount Book"
+                    books={topDiscountProducts}
+                    discounts={discounts}
+                />
+            </Container>
+        </>
+
     );
 };
 

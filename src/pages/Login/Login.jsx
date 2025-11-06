@@ -4,6 +4,7 @@ import './Login.css';
 import { Link, useNavigate } from "react-router-dom"
 import axios from 'axios';
 import { AuthContext } from '../../contexts/AuthContext';
+import Header from '../../components/Header/Header';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -24,17 +25,22 @@ const Login = () => {
                 (u) => u.email === email && u.password === password
             );
 
-            if (user) {
-                if (user.status === "active") {
-                    alert(`Welcome back, ${user.username} !`);
-                    login(user);
-                    navigate('/');
-                } else {
-                    setError("The account was banned!");
-                }
-            } else {
-                setError("Invalid Email or password.");
+            if (!user) {
+                setError("Invalid email or password.");
+                return;
             }
+
+            if (user.status !== "active") {
+                setError("The account was banned!");
+                return;
+            }
+
+            alert(`Welcome back, ${user.username}!`);
+            login(user);
+
+            const destination = user.role === "User" ? "/" : "/dashboard";
+            navigate(destination);
+
 
 
         } catch (error) {
@@ -47,49 +53,54 @@ const Login = () => {
 
 
     return (
-        <Container className="d-flex justify-content-center align-items-center vh-100">
-            <Card className="login-card shadow">
-                <h2 className="text-center">Login</h2>
-                <p className="text-center text-muted">Enter email and password to continue</p>
+        <>
+            <Header />
+            <Container className="d-flex justify-content-center align-items-center vh-100">
+                <Card className="login-card shadow">
+                    <h2 className="text-center">Login</h2>
+                    <p className="text-center text-muted">Enter email and password to continue</p>
 
-                {error && <Alert variant='danger'>{error}</Alert>}
+                    {error && <Alert variant='danger'>{error}</Alert>}
 
-                <Form onSubmit={handleLogin}>
-                    <Form.Group controlId="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control
-                            type="email"
-                            placeholder="example@email.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </Form.Group>
+                    <Form onSubmit={handleLogin}>
+                        <Form.Group controlId="email">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control
+                                type="email"
+                                placeholder="example@email.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </Form.Group>
 
-                    <Form.Group controlId="password">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                            type="password"
-                            placeholder="*******"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    </Form.Group>
+                        <Form.Group controlId="password">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="*******"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </Form.Group>
 
-                    <Button variant="primary" type="submit" className="btn-block">
-                        Login
-                    </Button>
-                </Form>
+                        <Button variant="primary" type="submit" className="btn-block">
+                            Login
+                        </Button>
+                    </Form>
 
-                <p className="text-center mt-3">
-                    Do you have an account?
-                    <Link to="/register">
-                        Sign Up
-                    </Link>
-                </p>
-            </Card>
-        </Container>
+                    <p className="text-center mt-3">
+                        Do you have an account?
+                        <Link to="/register">
+                            Sign Up
+                        </Link>
+                    </p>
+                </Card>
+            </Container>
+
+        </>
+
     );
 };
 

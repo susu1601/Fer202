@@ -27,7 +27,7 @@
       "password": "1234",
       "status": "active",
       "role": "User",
-      "phoneNumber": "",
+      "phoneNumber": "096290138",
       "address": "Đông Anh"
     }
   ],
@@ -41,8 +41,8 @@
       "name": "Literature"
     },
     {
-      "id": "3",
-      "name": "Business"
+      "name": "Business",
+      "id": "3"
     },
     {
       "id": "4",
@@ -113,7 +113,7 @@
       "description": "Những câu chuyện đời thường nhẹ nhàng, hài hước về cuộc sống hàng ngày. Với nét vẽ dễ thương và tình huống vui nhộn, đây là cuốn truyện giúp bạn thư giãn và mỉm cười sau những giờ làm việc căng thẳng.",
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/93/4f/04/0ec6a77855d2d246a5fb0b6d4830ec2e.png.webp",
       "entrydate": "2024-08-30",
-      "price": 140000,
+      "price": "150000",
       "quantity": 8,
       "categoryId": 3,
       "discountId": 4,
@@ -179,7 +179,7 @@
       "image": "https://salt.tikicdn.com/cache/750x750/ts/product/56/36/b3/5f8ac2a1d5abcf947c3237af67ad8d50.jpg.webp",
       "entrydate": "2025-09-01",
       "price": 160000,
-      "quantity": 9,
+      "quantity": 8,
       "categoryId": 1,
       "discountId": 3,
       "isHot": true
@@ -401,7 +401,7 @@
       "image": "emyth.jpg",
       "entrydate": "2025-09-08",
       "price": 155000,
-      "quantity": 11,
+      "quantity": 10,
       "categoryId": 3,
       "discountId": null
     },
@@ -553,13 +553,14 @@
       "id": "41",
       "name": "A Brief History of Time",
       "author": "Stephen Hawking",
-      "description": "Cosmology and the universe",
+      "description": "That's a great book that ever seen in the wolrd.",
       "image": "briefhistory.jpg",
       "entrydate": "2025-09-23",
       "price": 150000,
       "quantity": 12,
       "categoryId": 5,
-      "discountId": 2
+      "discountId": 2,
+      "isHot": true
     },
     {
       "id": "42",
@@ -572,6 +573,19 @@
       "quantity": 12,
       "categoryId": 5,
       "discountId": null
+    },
+    {
+      "id": "43",
+      "name": "Doraemon",
+      "author": " Fujiko F. Fujio",
+      "description": "Bộ truyện được xem là huyền thoại của Nhật Bản. Nói về cuộc sống của một chú nhóc tên Nobita, tính tình hậu đậu và chú mèo máy Doremon đến từ thế kỉ 22 cùng những người bạn Xuka, Chaien, Xeko; để từ đó gây ra bao tiếng cười và rút ra những bài học ý nghĩa cho người xem !!",
+      "image": "https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-truyen-tranh-doremon.jpg",
+      "entrydate": "2025-11-06",
+      "price": "30000",
+      "quantity": 19,
+      "categoryId": 1,
+      "discountId": 2,
+      "isHot": true
     }
   ],
   "discounts": [
@@ -609,7 +623,7 @@
       "amountPercentage": 15,
       "startDate": "2025-03-01",
       "endDate": "2025-12-31",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "5",
@@ -625,7 +639,7 @@
     {
       "id": "5218",
       "customerId": "3",
-      "totalAmount": 60000
+      "totalAmount": 30000
     },
     {
       "id": "5a45",
@@ -636,6 +650,26 @@
       "id": "4d0c",
       "customerId": "6906b706511afb5f9ad1f730",
       "totalAmount": 252500
+    },
+    {
+      "id": "52cd",
+      "customerId": "1",
+      "totalAmount": 480000
+    },
+    {
+      "id": "d8d0",
+      "customerId": "1",
+      "totalAmount": 130000
+    },
+    {
+      "id": "1fa6",
+      "customerId": "2",
+      "totalAmount": 325000
+    },
+    {
+      "id": "5e12",
+      "customerId": "2",
+      "totalAmount": 485000
     }
   ],
   "cartDetails": [
@@ -659,6 +693,48 @@
       "productId": "12",
       "quantity": 1,
       "price": 120000
+    },
+    {
+      "id": "d824",
+      "cartId": "d8d0",
+      "productId": "3",
+      "quantity": 1,
+      "price": 130000
+    },
+    {
+      "id": "db50",
+      "cartId": "52cd",
+      "productId": "28",
+      "quantity": 2,
+      "price": 155000
+    },
+    {
+      "id": "d87a",
+      "cartId": "52cd",
+      "productId": "30",
+      "quantity": 1,
+      "price": 170000
+    },
+    {
+      "id": "94d4",
+      "cartId": "5e12",
+      "productId": "28",
+      "quantity": 1,
+      "price": 155000
+    },
+    {
+      "id": "9cd7",
+      "cartId": "5e12",
+      "productId": "30",
+      "quantity": 1,
+      "price": 170000
+    },
+    {
+      "id": "422d",
+      "cartId": "1fa6",
+      "productId": "30",
+      "quantity": 1,
+      "price": 170000
     }
   ],
   "orders": [
@@ -667,7 +743,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 148000
     },
     {
@@ -675,7 +751,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 145500
     },
     {
@@ -683,7 +759,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 88000
     },
     {
@@ -691,7 +767,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 246500
     },
     {
@@ -699,7 +775,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 231000
     },
     {
@@ -707,7 +783,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 247500
     },
     {
@@ -715,7 +791,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 704000
     },
     {
@@ -723,7 +799,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 275000
     },
     {
@@ -731,7 +807,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 456000
     },
     {
@@ -739,7 +815,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 562000
     },
     {
@@ -747,7 +823,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 562000
     },
     {
@@ -755,7 +831,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 562000
     },
     {
@@ -763,7 +839,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 562000
     },
     {
@@ -771,7 +847,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 674000
     },
     {
@@ -779,7 +855,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 296000
     },
     {
@@ -787,7 +863,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 296000
     },
     {
@@ -795,7 +871,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 296000
     },
     {
@@ -803,7 +879,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 57500
     },
     {
@@ -811,7 +887,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 327500
     },
     {
@@ -819,15 +895,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
-      "totalAmount": 385000
-    },
-    {
-      "id": "7db0",
-      "userId": 3,
-      "date": "2025-11-01",
-      "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Success",
       "totalAmount": 385000
     },
     {
@@ -835,7 +903,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 385000
     },
     {
@@ -843,7 +911,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 307500
     },
     {
@@ -851,7 +919,7 @@
       "userId": 3,
       "date": "2025-11-01",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 440000
     },
     {
@@ -859,7 +927,7 @@
       "userId": 3,
       "date": "2025-11-02",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 325000
     },
     {
@@ -867,7 +935,7 @@
       "userId": 3,
       "date": "2025-11-03",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 208000
     },
     {
@@ -875,8 +943,32 @@
       "userId": 3,
       "date": "2025-11-03",
       "shippingAddress": "Đông Anh",
-      "status": "Đang xử lý",
+      "status": "Progress",
       "totalAmount": 60000
+    },
+    {
+      "id": "d841",
+      "userId": 2,
+      "date": "2025-11-04",
+      "shippingAddress": "Ho Chi Minh",
+      "status": "Progress",
+      "totalAmount": 112000
+    },
+    {
+      "id": "bcbe",
+      "userId": 2,
+      "date": "2025-11-04",
+      "shippingAddress": "Ho Chi Minh",
+      "status": "Progress",
+      "totalAmount": 155000
+    },
+    {
+      "id": "b8ee",
+      "userId": 3,
+      "date": "2025-11-06",
+      "shippingAddress": "Đông Anh",
+      "status": "Progress",
+      "totalAmount": 24000
     }
   ],
   "orderDetails": [
@@ -1175,20 +1267,6 @@
       "price": 135000
     },
     {
-      "id": "e755",
-      "orderId": "7db0",
-      "productId": "6",
-      "quantity": 2,
-      "price": 57500
-    },
-    {
-      "id": "7d26",
-      "orderId": "7db0",
-      "productId": "7",
-      "quantity": 2,
-      "price": 135000
-    },
-    {
       "id": "3391",
       "orderId": "07b0",
       "productId": "6",
@@ -1271,6 +1349,27 @@
       "productId": "1",
       "quantity": 1,
       "price": 60000
+    },
+    {
+      "id": "d856",
+      "orderId": "d841",
+      "productId": "10",
+      "quantity": 1,
+      "price": 112000
+    },
+    {
+      "id": "d2b5",
+      "orderId": "bcbe",
+      "productId": "28",
+      "quantity": 1,
+      "price": 155000
+    },
+    {
+      "id": "a3f5",
+      "orderId": "b8ee",
+      "productId": "43",
+      "quantity": 1,
+      "price": 24000
     }
   ],
   "feedbacks": [
